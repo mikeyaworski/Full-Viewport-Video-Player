@@ -46,10 +46,7 @@
       }
     }
   },
-  "permissions": [
-    "activeTab",
-    "commands"
-  ],
+  "permissions": [],
   "browser_specific_settings": {
     "gecko": {
       "id": "full-viewport-video-player@mikeyaworski.com",
