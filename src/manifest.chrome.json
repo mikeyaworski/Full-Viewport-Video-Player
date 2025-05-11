@@ -16,7 +16,22 @@
       "all_frames": true,
       "matches": ["<all_urls>"],
       "js": ["content-script.js"],
-      "css" : ["styles.css"]
+      "css" : ["styles/general.css"]
+    },
+    {
+      "all_frames": true,
+      "matches": ["https://*.youtube.com/*"],
+      "css" : ["styles/youtube.css"]
+    },
+    {
+      "all_frames": true,
+      "matches": ["https://*.rumble.com/*"],
+      "css" : ["styles/rumble.css"]
+    },
+    {
+      "all_frames": true,
+      "matches": ["https://*.substack.com/*"],
+      "css" : ["styles/substack.css"]
     }
   ],
   "background": {

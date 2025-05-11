@@ -1,0 +1,23 @@
+/* .body-full-viewport-video-player-active *:not(.full-viewport-video-player) {
+  visibility: hidden !important;
+  z-index: -1 !important;
+} */
+.body-full-viewport-video-player-active .media-info,
+.body-full-viewport-video-player-active header,
+.body-full-viewport-video-player-active aside,
+.body-full-viewport-video-player-active nav {
+  visibility: hidden !important;
+}
+
+.full-viewport-video-player {
+  transform: unset !important;
+  transition: unset !important;
+}
+
+.full-viewport-video-player ~ * {
+  z-index: 2147483647 !important;
+  position: fixed !important;
+  left: 0 !important;
+  bottom: 0 !important;
+  width: 100vw !important;
+}

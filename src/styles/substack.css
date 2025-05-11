@@ -1,0 +1,10 @@
+.body-full-viewport-video-player-active .fullscreen > .pencraft > .pencraft.pc-display-flex.pc-position-relative.pc-reset {
+  transform: none !important;
+}
+
+.body-full-viewport-video-player-active .fullscreen > .pencraft > .pencraft.pc-display-flex.pc-position-relative.pc-reset + .pencraft.pc-display-flex.pc-position-absolute.pc-reset {
+  position: fixed !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  z-index: 2147483647 !important;
+}
