@@ -14,12 +14,6 @@
   "content_scripts": [
     {
       "all_frames": true,
-      "matches": ["<all_urls>"],
-      "js": ["content-script.js"],
-      "css" : ["styles/general.css"]
-    },
-    {
-      "all_frames": true,
       "matches": ["https://*.youtube.com/*"],
       "css" : ["styles/youtube.css"]
     },
@@ -46,5 +40,8 @@
       }
     }
   },
-  "permissions": []
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ]
 }
