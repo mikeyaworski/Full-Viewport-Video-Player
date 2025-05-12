@@ -1,0 +1,23 @@
+name: Deploy Chrome
+on:
+  push:
+    branches: [master]
+jobs:
+  deploy:
+    if: startsWith(github.event.head_commit.message, 'chore(release):')
+    runs-on: ubuntu-latest
+    env:
+      CHROME_APP_ID: lehmcmonglfmfamfcfkmlijdpflkdhjp
+    steps:
+    - uses: actions/checkout@v2
+    - uses: montudor/action-zip@v1
+    - run: rm src/manifest.firefox.json
+    - run: mv src/manifest.chrome.json src/manifest.json
+    - run: cd src && zip -r package.zip .
+    - uses: trmcnvn/chrome-addon@v2
+      with:
+        extension: ${{ env.CHROME_APP_ID }}
+        zip: package.zip
+        client-id: ${{ secrets.CHROME_CLIENT_ID }}
+        client-secret: ${{ secrets.CHROME_CLIENT_SECRET }}
+        refresh-token: ${{ secrets.CHROME_REFRESH_TOKEN }}
